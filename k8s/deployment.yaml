@@ -18,6 +18,7 @@ spec:
       containers:
         - name: ecommerce-backend
           image: bhavanithanish/ecommerce-backend:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
