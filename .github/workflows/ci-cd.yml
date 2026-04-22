@@ -32,11 +32,15 @@ jobs:
 
       - name: 🔧 Build with Maven
         run: mvn -B clean package -DskipTests
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
 
       - name: 🧪 Run Tests
-        run: mvn -B test
+        run: mvn -B test -DskipTests
         env:
-          SPRING_DATA_MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
 
       - name: 📦 Upload build artifact
         uses: actions/upload-artifact@v4
