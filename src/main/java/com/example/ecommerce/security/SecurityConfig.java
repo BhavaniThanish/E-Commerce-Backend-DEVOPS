@@ -1,4 +1,5 @@
 package com.example.ecommerce.security;
+
 import com.example.ecommerce.service.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
