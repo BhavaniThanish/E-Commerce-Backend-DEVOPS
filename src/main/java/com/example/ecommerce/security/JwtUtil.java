@@ -44,7 +44,6 @@ public class JwtUtil {
                 .getPayload();
         return claims.getSubject();
     }
-
     public boolean validateToken(String token) {
         try {
             Jwts.parser()
