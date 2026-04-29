@@ -1,4 +1,4 @@
-﻿package com.example.ecommerce.model;
+package com.example.ecommerce.model;
 
 public class OrderItem {
     private String productId;
