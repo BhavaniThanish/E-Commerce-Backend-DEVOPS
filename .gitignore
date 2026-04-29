@@ -1,37 +1,23 @@
-# ─── Java & Maven ───────────────────────────────────
+﻿HELP.md
 target/
-*.class
-*.jar
-*.war
-*.ear
-*.logs
-hs_err_pid*
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# ─── Environment & Secrets ──────────────────────────
-.env
-*.env
-application-local.properties
-
-# ─── IDE Files ──────────────────────────────────────
-.vscode/
-.idea/
-*.iml
+### STS ###
+.apt_generated
 .classpath
+.factorypath
 .project
-.settings/
+.settings
+.springBeans
+.sts4-cache
 
-# ─── OS Files ───────────────────────────────────────
-.DS_Store
-Thumbs.db
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-# ─── Node (seed scripts) ────────────────────────────
-node_modules/
-npm-debug.log
-
-# ─── Kubernetes sensitive configs ───────────────────
-kubeconfig
-*.kubeconfig
-
-# ─── Temp ───────────────────────────────────────────
-temp-repo/
-*.tmp
+### VS Code ###
+.vscode/
