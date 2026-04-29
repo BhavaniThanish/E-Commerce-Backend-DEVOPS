@@ -20,7 +20,7 @@ public class ProductService {
     }
 
     public Product findById(String id) {
-        return productRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Product not found"));
+        return productRepository.findById(id).orElse(null);
     }
 
     public Product save(Product product) {
@@ -29,5 +29,9 @@ public class ProductService {
 
     public void delete(String id) {
         productRepository.deleteById(id);
+    }
+
+    public List<Product> searchByName(String name) {
+        return productRepository.findByNameContainingIgnoreCase(name);
     }
 }
